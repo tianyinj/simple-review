@@ -3,11 +3,12 @@
  */
 const fetch = require('./fetch')
 const review_list_url = 'https://movie.douban.com/subject/'
+const review_url = 'https://movie.douban.com/review/'
 /* 
  * 抓取一个txt
  */
-function readOne(){
-
+function readOne(id){
+  return fetch(`${review_url}${id}`, false)
 }
 
 /* 

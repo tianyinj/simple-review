@@ -4,7 +4,8 @@
     "pages/profile/profile",
     "pages/movie-item/movie-item",
     "pages/review-item/review-item",
-    "pages/review-list/review-list"
+    "pages/review-list/review-list",
+    "pages/review-content/review-content"
   ],
   "window":{
     "backgroundTextStyle":"light",
