@@ -37,7 +37,6 @@ Page({
           reviews.push({review_id:obj[0], title:obj[1]})
         }
         this.setData({reviews: reviews})
-        wx.setStorageSync("file", this.data.reviews)
       })
       .catch(e => {
         console.error(e)
