@@ -1,7 +1,5 @@
-<import src="../common/movie-list"/>
-<view class="container">
-  <view class="header">
-    <input class="search" bindchange="onSearch"/>
-  </view>
-  <template is="movie-list" data="{{movies}}"/>
+<import src="../movie-list/movie-list"/>
+<view class="header">
+  <input class="search" placeholder="{{placeHolder}}" bindchange="onSearch"/>
 </view>
+<template is="movie-list" data="{{movies}}"/>

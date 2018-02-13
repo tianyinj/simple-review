@@ -1,7 +1,10 @@
 {
   "pages":[
     "pages/search/search",
-    "pages/profile/profile"
+    "pages/profile/profile",
+    "pages/movie-item/movie-item",
+    "pages/review-item/review-item",
+    "pages/review-list/review-list"
   ],
   "window":{
     "backgroundTextStyle":"light",

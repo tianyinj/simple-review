@@ -1,9 +1,13 @@
 //app.js
 const nytimes = require('./utils/nytimes.js')
+const douban = require('./utils/douban.js')
+const parser = require('./utils/parser.js')
 
 App({
   nytimes: nytimes,
-  
+  douban: douban,
+  parser: parser,
+
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []

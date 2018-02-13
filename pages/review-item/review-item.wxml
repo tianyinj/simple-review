@@ -1,0 +1,7 @@
+<template name="review-item">
+    <view class="review-item">
+      <view class="meta">
+        <text class="title">{{item.title}}</text>
+      </view>
+    </view>
+</template>

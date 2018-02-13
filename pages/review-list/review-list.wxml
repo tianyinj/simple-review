@@ -1,0 +1,8 @@
+<import src="../review-item/review-item"/>
+
+<template name="review-list">
+  <view class="list">
+    <template is="review-item" data="{{item}}" wx:for="{{reviews}}" wx:key="id"/>
+  </view>
+</template>
+
