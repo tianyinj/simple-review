@@ -1,1 +1,1 @@
-# simple-review (A Wechat APP demo)
+# simple-review (Wechat APP demo)
