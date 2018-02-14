@@ -24,17 +24,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(item) {
+    console.log(this)
     if (!item.id) return
     this.setData({ id: item.id })
 
     return app.parser.readAll(this.data.id)
       .then(d => {
-        var reg = /href="https:\/\/movie\.douban\.com\/review\/(.*)<\/a><\/h2>/g;
+        var reg = /href="https:\/\/movie\.douban\.com\/review\/((.|\u4E00-\u9FA5)*)<\/a><\/h2>/ug;
         var matches = this.getMatches(d.data, reg)
         var reviews = []
         for (var i=0; i<matches.length; i++){
           var obj = matches[i].split(/\/">/)
-          reviews.push({review_id:obj[0], title:obj[1]})
+          reviews.push({ review_id: obj[0], title:obj[1]})
         }
         this.setData({reviews: reviews})
       })

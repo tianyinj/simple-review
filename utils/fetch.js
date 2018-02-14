@@ -25,7 +25,9 @@ module.exports = function (url, hasParams, params) {
         url: url,
         method: 'GET',
         success: resolve,
-        fail: reject
+        fail: function ({ errMsg }) {
+          console.log(`${url} request fail`, errMsg)
+        }
       })
     })
   }

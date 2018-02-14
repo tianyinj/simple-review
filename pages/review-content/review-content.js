@@ -1,4 +1,5 @@
 // pages/review-content/review-content.js
+var WxParse = require('../../utils/wxParse.js');
 const app = getApp()
 
 Page({
@@ -9,28 +10,27 @@ Page({
     id: ''
   },
 
-  getMatches(string, regex) {
-    var matches = [];
-    var match;
-    while (match = regex.exec(string)) {
-      matches.push(match);
-    }
-    return matches;
-  },
-
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(item) {
-    console.log(item)
     if (!item.id) return
     this.setData({ id: item.id })
 
     return app.parser.readOne(this.data.id)
       .then(d => {
-        var reg = /<p>(.*)<\/p>/g;
-        var matches = this.getMatches(d.data, reg)
-        wx.setStorageSync("file", matches)
+        var start_idx = /<div id="link-report">/.exec(d.data).index;
+        var end_idx = /<div class="main-author">/.exec(d.data).index;
+
+        var str = d.data.substring(start_idx, end_idx)
+        var that = this;
+        WxParse.wxParse('article', 'html', str, that, 5);
+        that = this;
+        this.setData({ renderType: this.data.article.nodes[0].nodes[0].attr["data-original"] })
+        this.setData({article: this.data.article.nodes[0].nodes[0].nodes})
+        console.log(this.data.renderType)
+        console.log(this.data.article)
+        
       })
       .catch(e => {
         console.error(e)
@@ -85,4 +85,5 @@ Page({
   onShareAppMessage: function () {
   
   }
+
 })

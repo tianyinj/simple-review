@@ -3,7 +3,7 @@ Interface to Douban Movie API
 Author: Tia jiang
 **/
 
-const url = "https://douban.uieee.com"
+const url = "https://douban.uieee.com/v2/movie"
 const fetch = require('./fetch')
 
 /**

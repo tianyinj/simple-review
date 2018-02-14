@@ -22,7 +22,7 @@ Page({
   },
 
   search_douban() {
-    return app.douban.searchApi(`v2/movie/search`, true, this.data.keyword)
+    return app.douban.searchApi(`search`, true, this.data.keyword)
       .then(d => {
         if (d.data.subjects.length) {
           this.setData({movies: this.data.movies.concat(d.data.subjects)})
