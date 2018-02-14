@@ -11,13 +11,15 @@
 </template>
 
 <template name="review-block">
+  <text>{{title}}</text>
   <view class="list" wx:if="{{renderType == 1}}">
     <template is="text-block1" data="{{item}}" wx:for="{{article}}" wx:key="id"/>
   </view>
   <view class="list" wx:if="{{renderType == 0}}">
     <template is="text-block0" data="{{item}}" wx:for="{{article}}" wx:key="id"/>
   </view>
+  <button class="float" type="primary" bindtap="onSave"><p class="plus"> + </p></button>
 </template>
 
 
-<template is="review-block" data="{{article:article, renderType:renderType}}"/>
+<template is="review-block" data="{{title: title, article:article, renderType:renderType}}"/>

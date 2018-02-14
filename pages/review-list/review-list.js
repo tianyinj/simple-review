@@ -24,12 +24,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(item) {
-    console.log(this)
     if (!item.id) return
     this.setData({ id: item.id })
 
     return app.parser.readAll(this.data.id)
       .then(d => {
+        
         var reg = /href="https:\/\/movie\.douban\.com\/review\/((.|\u4E00-\u9FA5)*)<\/a><\/h2>/ug;
         var matches = this.getMatches(d.data, reg)
         var reviews = []

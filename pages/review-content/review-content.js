@@ -10,12 +10,27 @@ Page({
     id: ''
   },
 
+  onSave(){
+    var that = this.data
+    console.log(that)
+    var my_reviews = wx.getStorageSync('my_reviews')
+    if (!my_reviews) my_reviews = []
+    console.log(my_reviews)
+    var review = { review_id: this.data.id, title: this.data.title, 
+        renderType: this.data.renderType,
+        article: this.data.article}
+    console.log(review)
+    my_reviews.push(review)
+    this.setData({my_reviews: my_reviews})
+    wx.setStorageSync('my_reviews', my_reviews)
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(item) {
     if (!item.id) return
-    this.setData({ id: item.id })
+    this.setData({ id: item.id, title: item.title })
 
     return app.parser.readOne(this.data.id)
       .then(d => {
@@ -28,8 +43,6 @@ Page({
         that = this;
         this.setData({ renderType: this.data.article.nodes[0].nodes[0].attr["data-original"] })
         this.setData({article: this.data.article.nodes[0].nodes[0].nodes})
-        console.log(this.data.renderType)
-        console.log(this.data.article)
         
       })
       .catch(e => {

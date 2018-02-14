@@ -1,7 +1,7 @@
 /**
 Interface to Nytimes Movie API
 **/
-const fetch = require('./fetch')
+//const fetch = require('./fetch')
 
 const api_key = '78c73615837540efa12df2202cfbab80'
 const url = "https://api.nytimes.com/svc/movies/v2/critics/.json"

@@ -15,7 +15,9 @@ module.exports = function (url, hasParams, params) {
         method: 'GET',
         header: { 'Content-Type': 'json' },
         success: resolve,
-        fail: reject
+        fail: function({ errMsg }) {
+          console.log(`${url} request fail`, errMsg)
+        }
       })
     })
   }
