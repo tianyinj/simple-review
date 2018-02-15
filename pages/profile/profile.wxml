@@ -1,10 +1,11 @@
 <template name="review-item">
-      <text class="title">{{item.title}}</text>
+  <text bindtap="toggle_collapse" id="{{item.review_id}}"  data-index="{{ index }}"> {{item.title}}</text>
+  <text>{{item.collapse}}</text>
 </template>
 
 <template name="review-list">
   <view class="list">
-    <template is="review-item" data="{{item}}" wx:for="{{my_reviews}}" wx:key="item.review_id"/>
+    <template is="review-item" data="{{item, index:index}}" wx:for="{{my_reviews}}" wx:key=""/>
   </view>
 </template>
 
