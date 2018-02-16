@@ -15,6 +15,15 @@ Page({
     console.log(that)
     var my_reviews = wx.getStorageSync('my_reviews')
     if (!my_reviews) my_reviews = []
+
+    var saved_reviews = wx.getStorageSync('saved_reviews')
+    if (!saved_reviews) var saved_reviews = {}
+
+    if (saved_reviews[this.data.id]) return
+    saved_reviews[this.data.id] = true
+
+    wx.setStorageSync('saved_reviews', saved_reviews)
+
     console.log(my_reviews)
     var review = { review_id: this.data.id, title: this.data.title, 
         renderType: this.data.renderType,
