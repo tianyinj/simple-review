@@ -12,7 +12,7 @@ Page({
     this.setData({my_reviews: my_reviews})
   },
 
-  onLoad(item){
+  onLoad(){
     var my_reviews = wx.getStorageSync('my_reviews')
     console.log(my_reviews)
     if (!my_reviews) my_reviews = []
@@ -23,5 +23,9 @@ Page({
     
     this.setData({ my_reviews: my_reviews })
 
+  },
+
+  onShow(item){
+    this.onLoad()
   }
 })
