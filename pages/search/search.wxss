@@ -1,0 +1,9 @@
+@import "../common/common.wxss";
+
+.search {
+    width: 90%;
+    height: 100rpx;
+    margin-left: 5%;
+    border: 5rpx solid #ccc;
+    border-radius: 20rpx;
+}

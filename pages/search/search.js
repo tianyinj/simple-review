@@ -37,6 +37,4 @@ Page({
     this.setData({ movies: [], keyword: e.detail.value })
     this.search_douban()
   }
-
-
 })

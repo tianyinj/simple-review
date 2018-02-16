@@ -1,9 +1,0 @@
-<template name="review-item">
-  <navigator url = "../review-content/review-content?id={{item.review_id}}&title={{item.title}}">
-    <view class="review-item">
-      <view class="meta">
-        <text class="title">{{item.title}}</text>
-      </view>
-    </view>
-  </navigator>
-</template>

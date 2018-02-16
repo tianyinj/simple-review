@@ -1,0 +1,9 @@
+
+
+/* pages/common/common.wxss */
+
+.movie-list {
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+  box-shadow: 0 0 5rpx #e0e0e0;
+}

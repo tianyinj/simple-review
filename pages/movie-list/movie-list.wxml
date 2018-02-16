@@ -1,8 +1,0 @@
-<import src="../movie-item/movie-item"/>
-
-<template name="movie-list">
-  <view class="list">
-    <template is="movie-item" data="{{item}}" wx:for="{{movies}}" wx:key="id"/>
-  </view>
-</template>
-
