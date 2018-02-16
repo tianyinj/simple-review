@@ -14,6 +14,7 @@ Page({
   },
 
   toggle_collapse(e){
+    console.log(e)
     var index = e.currentTarget.dataset.index
     var my_reviews = this.data.my_reviews
     my_reviews[index].collapse = !my_reviews[index].collapse
