@@ -8,7 +8,7 @@
 
 <template name="review-item">
 <view>
-  <view class="title" bindtap="toggle_collapse" id="{{item.review_id}}"  data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove"> {{item.title}}</view>
+  <view style="left:{{item.left}}rpx" class="title" bindtap="toggle_collapse" id="{{item.review_id}}"  data-index="{{index}}" bindtouchstart="touchstart" bindtouchmove="touchmove" > {{item.title}}</view>
   <view class="reader" wx:if = "{{!item.collapse}}">
     <view class="list" wx:if="{{item.renderType == 1}}">
     <template is="text-block1" data="{{item}}" wx:for="{{item.article}}" wx:key="id"/>

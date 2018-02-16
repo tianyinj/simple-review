@@ -9,7 +9,9 @@ Page({
     startY:0,
     endX: 0,
     endX: 0,
-    angle: 0
+    angle: 0,
+
+    left:0,
   },
 
   toggle_collapse(e){
@@ -27,8 +29,8 @@ Page({
 
     for (var i=0; i<my_reviews.length; i++){
       my_reviews[i].collapse = true
+      my_reviews[i].left = this.data.left
     }
-    
     this.setData({ my_reviews: my_reviews })
 
   },
@@ -43,11 +45,17 @@ Page({
   },
   touchmove(e){
     var endX = e.changedTouches[0].clientX,
-      endY = e.changedTouches[0].clientY;
+      endY = e.changedTouches[0].clientY,
+      offset = endX - this.data.startX,
+      index = e.currentTarget.dataset.index,
+      my_reviews = this.data.my_reviews
+      this.data.left = offset;
+    this.setData({my_review: my_reviews})
     if (this.data.startX-endX > 200 && this.data.hasMove) {
-      this.delItem(e.currentTarget.dataset.index)
+      this.delItem(index)
       this.setData({hasMove: false})
     }
+    this.onLoad()
   },
 
   delItem(index){
