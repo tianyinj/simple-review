@@ -1,25 +1,22 @@
 <template name="text-block0">
-    <view class="meta">
-      <text class="content">{{item.text}}</text>
-    </view>
+    <view class="content">{{item.text}}</view>
 </template>
 
 <template name="text-block1">
-    <view class="meta">
-      <text class="content">{{item.nodes[0].text}}</text>
-    </view>
+    <view class="content">{{item.nodes[0].text}}</view>
 </template>
 
 <template name="review-block">
-  <text>{{title}}</text>
-  <view class="list" wx:if="{{renderType == 1}}">
+  <view wx:if="{{renderType == 1}}">
     <template is="text-block1" data="{{item}}" wx:for="{{article}}" wx:key="id"/>
   </view>
-  <view class="list" wx:if="{{renderType == 0}}">
+  <view wx:if="{{renderType == 0}}">
     <template is="text-block0" data="{{item}}" wx:for="{{article}}" wx:key="id"/>
   </view>
   <button class="float" type="primary" bindtap="onSave"><p class="plus"> + </p></button>
 </template>
 
-
-<template is="review-block" data="{{title: title, article:article, renderType:renderType}}"/>
+<view class="reader">
+  <text class="title">{{title}}</text>
+  <template is="review-block" data="{{title: title, article:article, renderType:renderType}}"/>
+</view>

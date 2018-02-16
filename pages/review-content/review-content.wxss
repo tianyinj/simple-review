@@ -18,12 +18,25 @@
   display: block;
   bottom: 0;
   left: 0;
-  right: 0;
-  text-align: center;
+  right: 0;t-align: center;
   padding: 0;
   margin: 0;
   line-height: 60px;
   font-size: 38px;
   font-family: 'Roboto';
   font-weight: 300;
+}
+
+.title{
+  font: 50rpx STSong;
+  font-weight: bold;
+  padding: 50rpx;
+}
+.content{
+  font: 35rpx STSong;
+  padding: 30rpx;
+}
+
+.reader{
+  background-color: #f0f0f0
 }

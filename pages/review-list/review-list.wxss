@@ -1,1 +1,1 @@
-/* pages/list/review-list.wxss */
+@import "../common/common.wxss";

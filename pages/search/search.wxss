@@ -6,4 +6,5 @@
     margin-left: 5%;
     border: 5rpx solid #ccc;
     border-radius: 20rpx;
+    margin-bottom: 5%;
 }

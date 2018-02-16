@@ -1,0 +1,13 @@
+.title{
+  font: 35rpx STSong;
+  font-weight: bold;
+  padding: 25rpx 0px;
+}
+.content{
+  font: 35rpx STSong;
+  padding: 30rpx;
+}
+
+.reader{
+  background-color: #f0f0f0
+}

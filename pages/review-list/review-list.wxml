@@ -1,10 +1,3 @@
 <import src="../common/common"/>
 
-<template name="review-list">
-  <view class="list">
-    <template is="review-item" data="{{item}}" wx:for="{{reviews}}" wx:key="item.review_id"/>
-  </view>
-</template>
-
-
 <template is="review-list" data="{{reviews}}"/>

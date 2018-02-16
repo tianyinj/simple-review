@@ -2,9 +2,7 @@
 <template name="movie-item">
   <navigator url="../review-list/review-list?id={{item.id}}">
     <view class="movie-item">
-      <view class="meta">
         <text class="title">{{item.title}}</text>
-      </view>
     </view>
   </navigator>
 </template>
@@ -17,17 +15,17 @@
 </template>
 
 
-
 <template name="review-item">
   <navigator url = "../review-content/review-content?id={{item.review_id}}&title={{item.title}}">
     <view class="review-item">
-      <view class="meta">
-        <text class="title">{{item.title}}</text>
-      </view>
+      <text class="title">{{item.title}}</text>
     </view>
   </navigator>
 </template>
 
 
-
-
+<template name="review-list">
+  <view class="review-list">
+    <template is="review-item" data="{{item}}" wx:for="{{reviews}}" wx:key="item.review_id"/>
+  </view>
+</template>
