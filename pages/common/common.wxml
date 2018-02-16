@@ -7,9 +7,8 @@
   </navigator>
 </template>
 
-
 <template name="movie-list">
-  <view class="movie-list">
+  <view class="list">
     <template is="movie-item" data="{{item}}" wx:for="{{movies}}" wx:key="id"/>
   </view>
 </template>
@@ -25,7 +24,7 @@
 
 
 <template name="review-list">
-  <view class="review-list">
+  <view class="list">
     <template is="review-item" data="{{item}}" wx:for="{{reviews}}" wx:key="item.review_id"/>
   </view>
 </template>

@@ -1,18 +1,20 @@
+@import "../common/common.wxss";
+
 .title{
-  position: relative;
   font: 35rpx STSong;
   font-weight: bold;
   padding: 25rpx 0px;
-  border: 1rpx solid #e0e0e0;
 }
-.content{
-  font: 35rpx STSong;
-  padding: 30rpx;
+.reader{
+  background-color: #f0f0f0;
 }
 
-.reader{
-  background-color: #f0f0f0
+.content{
+  font: 35rpx STSong;
+  padding-top: 50rpx;
 }
+
+
 
 
 

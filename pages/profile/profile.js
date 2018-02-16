@@ -68,7 +68,12 @@ Page({
     for (var i = 0; i < my_reviews.length; i++) {
       my_reviews[i].left = 0
     }
+    this.data.hasStart = false
+    this.data.hasMove = false
+    this.data.startX = 0
+    this.data.endX = 0
     this.setData({ my_reviews: my_reviews })
+    
   },
 
 

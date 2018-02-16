@@ -36,5 +36,10 @@ Page({
   onSearch(e) {
     this.setData({ movies: [], keyword: e.detail.value })
     this.search_douban()
+  },
+
+  clearKeyword(e) {
+    console.log(e)
+    this.setData({ movies: [], keyword: ''})
   }
 })

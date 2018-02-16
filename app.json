@@ -6,20 +6,21 @@
     "pages/review-content/review-content"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    
   },
   "tabBar": {
     "list": [
       {
         "pagePath": "pages/profile/profile",
-        "text": "我的"
+        "iconPath": "images/profile.png",
+        "selectedIconPath": "images/profile-active.png",
+        "text": "本地影评"
       },
       {
         "pagePath": "pages/search/search",
-        "text": "搜索"
+        "iconPath": "images/search.png",
+        "selectedIconPath": "images/search-active.png",
+        "text": "搜索豆瓣"
       }
     ]
   }

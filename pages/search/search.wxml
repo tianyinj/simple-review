@@ -1,6 +1,7 @@
 <import src="../common/common"/>
 
 <view class="sectionhearder">
-  <input class="search" placeholder="{{placeHolder}}" bindconfirm="onSearch"/>
+  <input class="search"  placeholder=" {{placeHolder}}" value="{{keyword}}" bindconfirm="onSearch" focus="true"/>
+  <icon type="clear" class="clear" catchtap="clearKeyword"/>
 </view>
 <template is="movie-list" data="{{movies}}"/>

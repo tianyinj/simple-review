@@ -2,14 +2,16 @@
 
 .movie-item{
   font: 40rpx STSong;
-  padding: 15rpx;
+  padding: 10rpx;
 }
-
 
 .review-item{
   font: 35rpx STSong;
-  padding: 12rpx;
+  padding: 10rpx;
 }
 
+.list{
+  padding: 40rpx;
+}
 
 
