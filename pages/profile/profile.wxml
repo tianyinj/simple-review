@@ -1,6 +1,27 @@
+<template name="text-block0">
+    <view class="meta">
+      <text class="content">{{item.text}}</text>
+    </view>
+</template>
+
+<template name="text-block1">
+    <view class="meta">
+      <text class="content">{{item.nodes[0].text}}</text>
+    </view>
+</template>
+
 <template name="review-item">
+<view>
   <text bindtap="toggle_collapse" id="{{item.review_id}}"  data-index="{{ index }}"> {{item.title}}</text>
-  <text>{{item.collapse}}</text>
+  <view wx:if = "{{!item.collapse}}">
+    <view class="list" wx:if="{{item.renderType == 1}}">
+    <template is="text-block1" data="{{item}}" wx:for="{{item.article}}" wx:key="id"/>
+    </view>
+    <view class="list" wx:if="{{item.renderType == 0}}">
+      <template is="text-block0" data="{{item}}" wx:for="{{item.article}}" wx:key="id"/>
+    </view>
+  </view>
+</view>
 </template>
 
 <template name="review-list">
